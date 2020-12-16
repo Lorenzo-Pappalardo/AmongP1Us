@@ -1,6 +1,6 @@
 token = open("token.txt", 'r').read()
 
-colors = {
+colors_tasks = {
     "Rosso": {
         "Task 1": "Toccati il naso",
         "Task 2": "Batti cinque"
