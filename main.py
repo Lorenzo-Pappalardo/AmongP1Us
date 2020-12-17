@@ -4,6 +4,7 @@ from telegram.ext import Updater, Filters, CommandHandler, MessageHandler, Callb
 
 from config import token
 from callback_handlers import greetings, color_handler, tasks_handler
+from alert import alert
 from easter_egg import xD
 from error import print_error
 
@@ -28,6 +29,7 @@ conversation_handler = ConversationHandler(
 )
 
 dp.add_handler(conversation_handler)
+dp.add_handler(CommandHandler('alert', alert))
 dp.add_handler(MessageHandler(Filters.regex('xD'), xD))
 dp.add_handler(MessageHandler(Filters.all, print_error))
 
